@@ -1,0 +1,12 @@
+<?xml version="1.0"?>
+<!--
+   Name - Sanjay Kumar Das
+   Email - sanjay.d@gmail.com
+   Author - Sanjay
+   -->
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Backend:etc/menu.xsd">
+    <menu>
+        <add id="Codilar_Merchant::merchant" title="Merchant" translate="title" module="Codilar_Merchant" sortOrder="75" resource="Codilar_Merchant::merchant"/>
+        <add id="Codilar_Merchant::merchant_listing" title="All Merchant" translate="title" module="Codilar_Merchant" sortOrder="10" parent="Codilar_Merchant::merchant" action="merchant/info/index" resource="Codilar_Merchant::merchant"/>
+    </menu>
+</config>

@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<page layout="lcolumn" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+      xsi:noNamespaceSchemaLocation="urn:magento:framework:View/Layout/etc/layout_generic.xsd">
+    <body>
+        <referenceContainer name="content">
+           <referenceContainer name="product.info.main" >
+              <block class="Codilar\Merchant\Block\Merchant" name="merchant" before="-"
+                     template="Codilar_Merchant::merchant_attribute.phtml">
+                 </block>
+          </referenceContainer>
+
+    </referenceContainer>
+    </body>
+</page>

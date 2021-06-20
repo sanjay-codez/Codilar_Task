@@ -1,0 +1,29 @@
+<?xml version="1.0"?>
+<!--
+   Name - Sanjay Kumar Das
+   Email - sanjay.d@gmail.com
+   Author - Sanjay
+   -->
+<schema xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:noNamespaceSchemaLocation="urn:magento:framework:Setup/Declaration/Schema/etc/schema.xsd">
+    <table name="codilar_merchant_info" resource="default" engine="innodb"
+           comment=" Information Store">
+        <column xsi:type="int" name="id" padding="10" unsigned="true" nullable="false" identity="true"
+                comment="Merchant ID"/>
+        <column xsi:type="varchar" name="name" nullable="true" length="200"
+                comment="Merchant Name"/>
+        <column xsi:type="date" name="dob" nullable="true"  comment="Merchant Dob"/>
+        <column xsi:type="varchar" name="email" nullable="true" length="30"
+                comment="Merchant Email"/>
+        <column xsi:type="varchar" name="address" nullable="true" length="200"
+                comment="Merchant Address"/>
+        <column xsi:type="int" name="is_enable" nullable="true"   padding="10"
+                comment="Is Merchant Enabled"/>
+        <column xsi:type="varchar" name="image" nullable="true" length="500"
+                comment="Merchant Image"/>
+        <constraint xsi:type="primary" referenceId="PRIMARY">
+            <column name="id"/>
+        </constraint>
+    </table>
+</schema>
+

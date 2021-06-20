@@ -1,0 +1,23 @@
+<?xml version="1.0"?>
+<!--
+   Name - Sanjay Kumar Das
+   Email - sanjay.d@gmail.com
+   Author - Sanjay
+   -->
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:ObjectManager/etc/config.xsd">
+    <virtualType name="Codilar\Merchant\Model\ResourceModel\Merchant\Grid\Collection" type="Magento\Framework\View\Element\UiComponent\DataProvider\SearchResult">
+        <arguments>
+            <argument name="mainTable" xsi:type="string">codilar_merchant_info</argument>
+            <argument name="resourceModel" xsi:type="string">Codilar\Merchant\Model\ResourceModel\Merchant</argument>
+        </arguments>
+    </virtualType>
+    <type name="Magento\Framework\View\Element\UiComponent\DataProvider\CollectionFactory">
+        <arguments>
+            <argument name="collections" xsi:type="array">
+                <item name="merchant_listing_ui_data_source" xsi:type="string">Codilar\Merchant\Model\ResourceModel\Merchant\Grid\Collection</item>
+            </argument>
+        </arguments>
+    </type>
+    <preference for="Codilar\Merchant\Api\MerchantRepositoryInterface" type="Codilar\Merchant\Model\Api\MerchantRepository" />
+
+</config>
